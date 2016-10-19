@@ -1,0 +1,57 @@
+{% import "_macros.html" as macros %}
+
+<div class="x-center">
+    <div>
+
+    </div>
+    <div class="x-content" style="width:100%">
+
+    <h3>&nbsp;</h3>
+    {%- if posts -%}
+    {%- for post in posts -%}
+    <div class="post clearfix">
+        <div>
+            <h3><a href="/each_post/{{ post['id'] }}">{{ post['title'] | safe }}</a></h3>
+        </div>
+        <div>
+            <p><span class="icon-time">&nbsp;</span><i>Posted on {{ post['date'] |formatdate }} by {{ post['author'] }}</i></p>
+            <p>
+                {%- if post['preview'] -%}
+                    {{ post['preview']|markdown }}
+                {%- else -%}
+                    {{ post['body']|markdown }}
+                {%- endif -%}
+            </p>
+        <div class="infopanel">
+            <div class="tags">
+                <li class="icon-tags" title="tags"></li>
+                    {%- if post['tags'] -%}
+                        {%- for tag in post['tags'] -%}
+                            &nbsp;<a href="/tag/{{ tag }}">{{ tag }}</a>
+                        {%- endfor -%}
+                    {%- endif -%}
+            </div>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+        <div class="post clearfix">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="page-header">
+                        <h1>Posts not found..</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+{%- endif -%}
+
+{% if pagination and pagination.pages > 1 %}
+        <div class="pagination">
+        {{ macros.pagination_widget(pagination, '.index') }}
+        </div>
+{% endif %}
+
+    </div>
+</div>

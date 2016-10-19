@@ -1,0 +1,162 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Flasky_blog{% endblock %}
+
+{% block head %}
+{{ super() }}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="flask,blog,demo" />
+    <meta name="description" content="my flask blog demo" />
+    <!-- meta here -->
+    <!-- BEGIN CSS COMPRESS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/codemirror.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/highlight.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/itranswarp.css') }}" />
+    <!-- END CSS COMPRESS -->
+
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+	<link href="{{ url_for('static', filename='css/mdmagick.css') }}" rel="stylesheet">
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+	{%- block additional_css -%}{%- endblock -%}
+	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+	<script src="{{ url_for('static', filename='bower_components/platform/platform.js') }}"></script>
+	<script src="{{ url_for('static', filename='bower_components/polymer/polymer.js') }}"></script>
+	<link rel="import" href="{{ url_for('static', filename='bower_components/github-gist/github-gist.html') }}">
+
+    <style id="x-doc-style">
+
+    .x-display-if-not-signin { display: none; }
+
+    </style>
+
+    <style>
+.x-category-visible {
+    display: block;
+}
+</style>
+
+    <style>
+.x-center {
+    margin: 0;
+}
+
+
+
+
+.x-center {
+    margin-right: 316px;
+    padding-right: 15px;
+}
+
+
+</style>
+    <!-- END custom_header -->
+{% endblock %}
+
+{% block body %}
+<div id="wrapper">
+    <div id="header" class="uk-navbar uk-navbar-attached">
+        <div class="uk-container x-container">
+            <div class="uk-navbar uk-navbar-attached">
+
+                <a href="/" class="uk-navbar-brand uk-visible-large">Yao的代码世界</a>
+                <a href="/" class="uk-navbar-brand uk-hidden-large"><i class="uk-icon-home"></i></a>
+                <ul id="ul-navbar" class="uk-navbar-nav uk-hidden-small">
+
+                    <li><a href="{{ url_for('main.index') }}">主页</a></li>
+
+                    <li><a href="{{ url_for('main.new_post') }}">新话题</a></li>
+
+                    <li><a href=#>关于我</a></li>
+
+                </ul>
+
+                <ul class="uk-navbar-nav uk-visible-small">
+                    <li class="uk-parent" data-uk-dropdown>
+                        <a href="#0"><i class="uk-icon-navicon"></i></a>
+                        <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar">
+
+                                <li><a href="{{ url_for('main.index') }}">主页</a></li>
+
+                                <li><a href="{{ url_for('main.new_post')}}">新话题</a></li>
+
+                                <li><a href=#>关于我</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+
+<!--
+                <div class="uk-navbar-content x-hidden-tiny">
+                    <form id="form-search" class="uk-form uk-margin-remove uk-display-inline-block">
+                        <div class="uk-form-icon">
+                            <i class="uk-icon-search"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+-->
+
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-parent x-display-if-signin" data-uk-dropdown>
+                        {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('auth.logout') }}"><i class="uk-icon-user"></i><span class="x-hidden-tiny">&nbsp;</span><span class="x-user-name x-hidden-tiny">退出</span></a>
+                        {% else %}
+                            <a href="{{ url_for('auth.login') }}"><i class="uk-icon-user"></i><span class="x-hidden-tiny">&nbsp;</span><span class="x-user-name x-hidden-tiny">登录</span></a>
+                        {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- // header -->
+    <div class="container">
+                {% block page_content%}{% endblock %}
+                {%- include '_sidebar.html' -%}
+    </div>
+</div>
+
+<div id="footer">
+        <div class="x-footer uk-container x-container">
+            <hr>
+            <div class="uk-grid">
+                <div class="x-footer-copyright uk-width-small-1-2 uk-width-medium-1-3">
+                    <p>
+                        <a href="/">Yao的代码世界</a>&copy;2016
+                        <br>
+                        Powered by <a href="http://js.itranswarp.com" target="_blank">iTranswarp.js</a>
+                    </p>
+                </div>
+                <div class="uk-width-small-1-2 uk-width-medium-1-3 x-hidden-tiny">
+                    <a href="/feed" target="_blank" class="uk-icon-button uk-icon-rss" data-uk-tooltip title="Subscribe the RSS"></a>
+                    <a href="https://github.com/yaodeshiluo/flask_blog" target="_blank" class="uk-icon-button uk-icon-github" data-uk-tooltip title="View source code on GitHub"></a>
+                    <a href="https://twitter.com/liaoxuefeng" target="_blank" class="uk-icon-button uk-icon-twitter" data-uk-tooltip title="Follow author on Twitter"></a>
+                    <a href="http://www.weibo.com/liaoxuefeng" target="_blank" class="uk-icon-button uk-icon-weibo uk-visible-large uk-hidden-medium" data-uk-tooltip title="Follow author on Weibo"></a>
+                </div>
+                <div class="uk-width-medium-1-3 uk-hidden-small">
+                    <p>
+                        <a href="https://github.com/yaodeshiluo/flask_blog" target="_blank">Feedback</a>
+                        <br>
+                        <a href="https://github.com/yaodeshiluo/flask_blog" target="_blank">License</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{%- block scripts -%}
+    {{ super() }}
+    <script src="//codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    {%- block additional_js -%}{%- endblock -%}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{%- endblock -%}
+{% endblock %}
+
+
+

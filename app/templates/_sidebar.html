@@ -1,0 +1,20 @@
+{%- if recent_posts -%}
+<div class="col-lg-3 visible-lg sidebar">
+    <h2>最新的话题</h2>
+    <hr>
+    <ul>
+    {% for post in recent_posts %}
+        <li><a href="{{ url_for('main.each_post', id=post['id']) }}">{{ post['title'] | safe }}</a></li>
+    {% endfor %}
+    </ul>
+    {%- if tagslist -%}
+    <h2>Top标签</h2>
+    <hr>
+    <ul>
+    {% for each in tagslist %}
+        <li><a href="{{ url_for('main.posts_by_tag', page=1, tag=each['title']) }}">{{ each['title'] }} <sup class="badge">{{ each['count'] }}</sup></a></li>
+    {% endfor %}
+    </ul>
+    {%- endif -%}
+</div>
+{%- endif -%}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}post::{{ post.title }}{% endblock %}
+
+
+{%- block additional_css -%}<link href="{{ url_for('static', filename='css/lightbox.css') }}" rel="stylesheet" media="screen">{%- endblock -%}
+{% block page_content %}
+	{%- if post -%}
+		<div class="post clearfix">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="page-header">
+						<h1>{{ post.title | safe }}</h1>
+						<p><span class="icon-time">&nbsp;</span><i>Posted on {{ post.date |formatdate }} by {{ post.author.username }}</i></p>
+						<div class="social row-fluid">
+					        <!-- AddThis Button BEGIN -->
+							<div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+								<a class="addthis_button_twitter"></a>
+								<a class="addthis_button_facebook"></a>
+								<a class="addthis_button_google_plusone_share"></a>
+								<a class="addthis_button_evernote"></a>
+								<a class="addthis_button_pocket"></a>
+							</div>
+							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-526fe54e082798d3"></script>
+							<!-- AddThis Button END -->
+				        </div>
+					</div>
+					<div class="content article">
+						{{ post.preview|markdown }}
+						{{ post.body|markdown }}
+					</div>
+					<div class="infopanel">
+						<div class="tags">
+							<i>tags:</i>
+							{%- if tags: -%}
+								{%- for tag in tags -%}
+									&nbsp;<a href="{{ url_for('main.posts_by_tag', tag=tag) }}">{{ tag }}</a>
+								{%- endfor -%}
+							{%- endif -%}
+						</div>
+					</div>
+					<div class="x-comment-info">
+                		<hr>
+                		<a title="Edit" href="{{ url_for('main.post_edit',id=post['id']) }}" class="icon-edit-sign bigger icon">编辑</a>
+                		&nbsp;
+                		<a title="Delete" href="{{ url_for('main.post_delete', id=post['id']) }}" class="icon-remove-sign bigger icon">删除</a>
+            		</div>
+				</div>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endblock -%}
+{%- block additional_js -%}<script src="{{ url_for('static', filename='js/lightbox-2.6.min.js') }}"></script>{%- endblock -%}

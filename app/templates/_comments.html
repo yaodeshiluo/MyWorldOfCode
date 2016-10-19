@@ -1,0 +1,47 @@
+{% if comments %}
+<div class="x-anchor"><a name="comments"></a></div>
+<h3>评论</h3>
+<ul id="x-comment-list" class="uk-comment-list">
+    {% for comment in comments %}
+    <li>
+        <div class="uk-comment">
+            <div class="uk-comment-header" style="margin-bottom:0">
+                <a target="_blank" href="/user/00146096674346367a9c91dcfeb4611b68734c26b749f06000"><img class="uk-comment-avatar uk-border-circle x-avatar" src="http://tp4.sinaimg.cn/2304918687/50/40008961566/1" width="50" height="50" alt=""></a>
+                <h4 class="uk-comment-title"><a target="_blank" href="/discuss/00142954259723555cb71c29536401390a587b71a218900000/001461558431484f020df2a51034e5e8efee22d5c64082b000">{{ comment.title }}</a></h4>
+                <div class="uk-comment-meta"><a target="_blank" href="/user/00146096674346367a9c91dcfeb4611b68734c26b749f06000">{{ comment.author.username }}</a> created at {{ comment.date |formatdate }}</div>
+            </div>
+            <div class="uk-comment-body x-auto-content">
+                <p>{{ comment.body }}</p>
+
+            </div>
+        </div>
+        {{ if comment.subcomments }}
+        {{ for subcomment in comment.subcomments }}
+    <ul><li>
+        <div class="uk-comment">
+            <div class="uk-comment-header" style="margin-bottom:0">
+                <a target="_blank" href="/user/00146096674346367a9c91dcfeb4611b68734c26b749f06000"><img class="uk-comment-avatar uk-border-circle x-avatar" src="http://tp4.sinaimg.cn/2304918687/50/40008961566/1" width="50" height="50" alt=""></a>
+                <div class="uk-comment-meta"><a target="_blank" href="/user/00146096674346367a9c91dcfeb4611b68734c26b749f06000">{{ subcomment.author.username }}</a></div>
+                <div class="uk-comment-meta">Created at {{ comment.date |formatdate }}</div>
+            </div>
+            <div class="uk-comment-body x-auto-content">
+                <p>{{ subcomment.body }}</p>
+
+            </div>
+        </div>
+        </li>
+        <li>
+            <div class="x-comment-info">
+                <hr>
+                <a target="_blank" class="uk-button uk-button-small" href="/discuss/00142954259723555cb71c29536401390a587b71a218900000/001461558431484f020df2a51034e5e8efee22d5c64082b000"><i class="uk-icon-list-ul"></i> View Full Discuss</a>
+                &nbsp;
+                <a target="_blank" class="uk-button uk-button-small" href="/discuss/00142954259723555cb71c29536401390a587b71a218900000/001461558431484f020df2a51034e5e8efee22d5c64082b000#reply"><i class="uk-icon-reply"></i> Reply This Topic</a>
+            </div>
+        </li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}

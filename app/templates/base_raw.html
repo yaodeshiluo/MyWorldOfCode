@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}我的代码世界{% endblock %}</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="javascript,node,jquery,git,python,java,sql,linux,ios,android,教程,软件,编程,开发,运维,云计算,网络,互联网" />
+    <meta name="description" content="研究互联网产品和技术，提供原创中文精品教程" />
+    <meta property="x-nav" content=" /category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000 " />
+    <!-- meta here -->
+    <!-- BEGIN CSS COMPRESS -->
+    <link rel="stylesheet" href="static/css/codemirror.css" />
+    <link rel="stylesheet" href="static/css/highlight.css" />
+    <link rel="stylesheet" href="static/css/itranswarp.css" />
+    <!-- END CSS COMPRESS -->
+
+    <style id="x-doc-style">
+
+        .x-display-if-not-signin { display: none; }
+
+    </style>
+
+    <style>
+.x-category-visible {
+    display: block;
+}
+</style>
+
+    <style>
+.x-center {
+    margin: 0;
+}
+
+
+
+
+.x-center {
+    margin-right: 316px;
+    padding-right: 15px;
+}
+
+
+</style>
+    <!-- END custom_header -->
+</head>
+<body>
+    <div class="x-goto-top">
+        <div class="x-arrow"></div>
+        <div class="x-stick"></div>
+    </div>
+
+    <div id="header" class="uk-navbar uk-navbar-attached">
+        <div class="uk-container x-container">
+            <div class="uk-navbar uk-navbar-attached">
+
+                <a href="/" class="uk-navbar-brand uk-visible-large">廖雪峰的官方网站</a>
+                <a href="/" class="uk-navbar-brand uk-hidden-large"><i class="uk-icon-home"></i></a>
+                <ul id="ul-navbar" class="uk-navbar-nav uk-hidden-small">
+
+                    <li><a href="/category/0013738748415562fee26e070fa4664ad926c8e30146c67000">编程</a></li>
+
+                    <li><a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a></li>
+
+                    <li><a href="/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000">JavaScript教程</a></li>
+
+                    <li><a href="/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000">Python教程</a></li>
+
+                    <li><a href="/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a></li>
+
+                    <li><a href="/discuss">问答</a></li>
+
+                    <li><a href="/webpage/donate">赞助</a></li>
+
+                </ul>
+
+                <ul class="uk-navbar-nav uk-visible-small">
+                    <li class="uk-parent" data-uk-dropdown>
+                        <a href="#0"><i class="uk-icon-navicon"></i></a>
+                        <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar">
+
+                                <li><a href="/category/0013738748415562fee26e070fa4664ad926c8e30146c67000">编程</a></li>
+
+                                <li><a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a></li>
+
+                                <li><a href="/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000">JavaScript教程</a></li>
+
+                                <li><a href="/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000">Python教程</a></li>
+
+                                <li><a href="/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a></li>
+
+                                <li><a href="/discuss">问答</a></li>
+
+                                <li><a href="/webpage/donate">赞助</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+
+<!--
+                <div class="uk-navbar-content x-hidden-tiny">
+                    <form id="form-search" class="uk-form uk-margin-remove uk-display-inline-block">
+                        <div class="uk-form-icon">
+                            <i class="uk-icon-search"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+-->
+
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-parent x-display-if-signin" data-uk-dropdown>
+                            <a href="#0"><i class="uk-icon-user"></i><span class="x-hidden-tiny">&nbsp;</span><span class="x-user-name x-hidden-tiny">besilencer</span></a>
+                            <div class="uk-dropdown uk-dropdown-navbar">
+                                <ul class="uk-nav uk-nav-navbar">
+                                    <li><a target="_blank" href="/me/profile"><i class="uk-icon-cogs"></i> 个人资料</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li><a href="/auth/signout"><i class="uk-icon-power-off"></i> 登出</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="x-display-if-not-signin uk-hidden-small"><a href="javascript:showSignin()"><i class="uk-icon-sign-in"></i> 登录</a></li>
+                        <li class="x-display-if-not-signin uk-visible-small"><a href="javascript:showSignin()"><i class="uk-icon-sign-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- // header -->
+    <div id="main">
+        <div class="x-placeholder-50"><!-- placeholder --></div>
+        <div class="x-placeholder"><!-- placeholder --></div>
+        <div class="uk-container x-container">
+            <div class="uk-grid">
+                <div class="x-body-before uk-width-1-1">
+
+                </div>
+            </div>
+            <div class="uk-grid">
+                <div class="uk-width-1-1">
+
+
+                    <div class="x-sidebar-right">
+                        <div class="x-sidebar-right-top">
+                            <!-- __snippets__.sidebar_right_top -->
+                        </div>
+                        <div class="x-sidebar-right-content">
+
+
+                        </div>
+                        <div class="x-sidebar-right-bottom">
+                            <h3>关于作者</h3>
+<iframe width="100%" height="90" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1658384301&verifier=078cedea&colors=0593d3,ffffff,666666,0593d3,0477ab&dpc=1"></iframe>
+<iframe width="100%" height="90" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=2696563521&verifier=3201fa5c&colors=0593d3,ffffff,666666,0593d3,0477ab&dpc=1"></iframe>
+<div class="x-promo-b" style="width:100%;overflow-x:hidden;margin-bottom:5px"></div>
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="x-center">
+                        <div>
+
+                        </div>
+                        <div class="x-content" style="width:100%">
+
+
+    <h3>读书</h3>
+
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/0014741143689056decd84b35964ecb9bf1835dce6845fc000">我的代码世界</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/0014741143689056decd84b35964ecb9bf1835dce6845fc000"><img src="/files/attachments/001474114368843bbe0490e257740ebb22c3be778d2f23b000/s" alt="我的代码世界" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1474114368000">...</span> / 阅读: 301</p>
+            <p>我已经用尽了我的洪荒之力……</p>
+            <p><a href="/article/0014741143689056decd84b35964ecb9bf1835dce6845fc000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/0014724789939108cdd007695054bcc9797d10695eb4bc5000">软技能：代码之外的生存指南</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/0014724789939108cdd007695054bcc9797d10695eb4bc5000"><img src="/files/attachments/0014724789938196e4bf86b2bd944edaf6d8ef3c8b226ed000/s" alt="软技能：代码之外的生存指南" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1472478993920">...</span> / 阅读: 5331</p>
+            <p>这是一篇关于软件开发人员生存指南的书评</p>
+            <p><a href="/article/0014724789939108cdd007695054bcc9797d10695eb4bc5000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/001470544777192c56bbe3e3c7a4e9fa71fec233316ce3c000">奥运期间北京奥森玩转Pokemon Go权威指南</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/001470544777192c56bbe3e3c7a4e9fa71fec233316ce3c000"><img src="/files/attachments/001470544777135d5506f2b6d6b4a558e8d66bb97117f63000/s" alt="奥运期间北京奥森玩转Pokemon Go权威指南" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1470544777203">...</span> / 阅读: 3085</p>
+            <p>奥运期间，风靡全球的Pokemon Go可以在北京奥林匹克森林公园玩了！</p>
+            <p><a href="/article/001470544777192c56bbe3e3c7a4e9fa71fec233316ce3c000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/001470204632838d7a9845404f843b5b2598381aa5b559a000">给大家推荐几条经典的跑步路线</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/001470204632838d7a9845404f843b5b2598381aa5b559a000"><img src="/files/attachments/00147020463271802bbfcddad054a06b30def255f3750aa000/s" alt="给大家推荐几条经典的跑步路线" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1469842512000">...</span> / 阅读: 3644</p>
+            <p>给大家推荐几条经典的跑步路线，尤其是奥森北园著名的大乌龟线路。</p>
+            <p><a href="/article/001470204632838d7a9845404f843b5b2598381aa5b559a000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/001466303796621f83ef9cb3cb14795a195b603831e910b000">如何成长为一名优秀的运维工程师</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/001466303796621f83ef9cb3cb14795a195b603831e910b000"><img src="/files/attachments/00146630379651562c15833e6ca4ef0ac05bed1c16bf56d000/s" alt="如何成长为一名优秀的运维工程师" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1466519004000">...</span> / 阅读: 12140</p>
+            <p>又到了听故事，看广告的时间</p>
+            <p><a href="/article/001466303796621f83ef9cb3cb14795a195b603831e910b000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/001466303237191f4f85d3c019f4dd59853518c4a3d40dd000">如何成长为一名优秀的前端工程师</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/001466303237191f4f85d3c019f4dd59853518c4a3d40dd000"><img src="/files/attachments/001466303235857dd01dcc517624201bc2c3d7531367b57000/s" alt="如何成长为一名优秀的前端工程师" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1466303237201">...</span> / 阅读: 16648</p>
+            <p>听故事，学知识，不走弯路。</p>
+            <p><a href="/article/001466303237191f4f85d3c019f4dd59853518c4a3d40dd000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/00146535933727317d2dbef5b5d4ac896f07ad36f5c3a2f000">论胡编乱造的写作技巧</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/00146535933727317d2dbef5b5d4ac896f07ad36f5c3a2f000"><img src="/files/attachments/001465359336112fa1f567be73643a28986e61e69776dac000/s" alt="论胡编乱造的写作技巧" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1465309294000">...</span> / 阅读: 2241</p>
+            <p>编，我看你编……</p>
+            <p><a href="/article/00146535933727317d2dbef5b5d4ac896f07ad36f5c3a2f000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/001457587995335f01c00a8b85d46aa8b005d1d21b8b71a000">彪悍的职业不惧阿尔法狗</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/001457587995335f01c00a8b85d46aa8b005d1d21b8b71a000"><img src="/files/attachments/0014575879952615715d90ee6164a0fa0d00e694a8488b4000/s" alt="彪悍的职业不惧阿尔法狗" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1457601633000">...</span> / 阅读: 20956</p>
+            <p>为什么说只有彪悍的职业才不惧阿尔法狗的挑战！</p>
+            <p><a href="/article/001457587995335f01c00a8b85d46aa8b005d1d21b8b71a000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/0014562336218100b362e0da5c94ff9a9a30b9e906dcd34000">沉默的大多数</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/0014562336218100b362e0da5c94ff9a9a30b9e906dcd34000"><img src="/files/attachments/001456233621763ba74ef5766a746a2ae4a6ac3ccdf839e000/s" alt="沉默的大多数" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1456233621000">...</span> / 阅读: 10381</p>
+            <p>王小波的杂文集，非常好看！</p>
+            <p><a href="/article/0014562336218100b362e0da5c94ff9a9a30b9e906dcd34000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+    <div class="uk-article uk-clearfix">
+        <div>
+            <h3><a href="/article/00145325941950698c3d7fb5bd54e45a82096c8435d1bae000">素食，跑步，修行</a></h3>
+        </div>
+        <a class="x-cover-small" href="/article/00145325941950698c3d7fb5bd54e45a82096c8435d1bae000"><img src="/files/attachments/0014532607723445f588749c50e464ea710a6c3d4cce541000/s" alt="素食，跑步，修行" style="width:160px"></a>
+        <div>
+            <p><a href="/user/001383729881018b677b2776c24451e9b5f30a03ea5d73c000">廖雪峰</a> / <a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000">读书</a> / <span class="x-smartdate" date="1453335302000">...</span> / 阅读: 2258</p>
+            <p>他天生就不是运动好手：脊椎侧弯，大脚趾外翻，从小就有高血压。但在全素食的运动生涯中，他成长为美国长跑名将，被誉为“超马之神”。</p>
+            <p><a href="/article/00145325941950698c3d7fb5bd54e45a82096c8435d1bae000" class="uk-button uk-button-primary">继续阅读 »</a></p>
+        </div>
+    </div>
+
+
+
+        <ul class="uk-pagination">
+
+
+            <li class="uk-active"><span>1</span></li>
+
+
+
+            <li><a href="/category/0013738748248885ddf38d8cd1b4803aa74bcda32f853fd000?page=2">2</a></li>
+
+
+        </ul>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="uk-grid">
+                <div class="x-body-after uk-width-1-1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="x-footer uk-container x-container">
+            <hr>
+            <div class="uk-grid">
+                <div class="x-footer-copyright uk-width-small-1-2 uk-width-medium-1-3">
+                    <p>
+                        <a href="/">廖雪峰的官方网站</a>&copy;2015
+                        <br>
+                        Powered by <a href="http://js.itranswarp.com" target="_blank">iTranswarp.js</a>
+                    </p>
+                </div>
+                <div class="uk-width-small-1-2 uk-width-medium-1-3 x-hidden-tiny">
+                    <a href="/feed" target="_blank" class="uk-icon-button uk-icon-rss" data-uk-tooltip title="Subscribe the RSS"></a>
+                    <a href="https://github.com/michaelliao/itranswarp.js" target="_blank" class="uk-icon-button uk-icon-github" data-uk-tooltip title="View source code on GitHub"></a>
+                    <a href="https://twitter.com/liaoxuefeng" target="_blank" class="uk-icon-button uk-icon-twitter" data-uk-tooltip title="Follow author on Twitter"></a>
+                    <a href="http://www.weibo.com/liaoxuefeng" target="_blank" class="uk-icon-button uk-icon-weibo uk-visible-large uk-hidden-medium" data-uk-tooltip title="Follow author on Weibo"></a>
+                </div>
+                <div class="uk-width-medium-1-3 uk-hidden-small">
+                    <p>
+                        <a href="https://github.com/michaelliao/itranswarp.js/issues" target="_blank">Feedback</a>
+                        <br>
+                        <a href="https://github.com/michaelliao/itranswarp.js/blob/master/LICENSE" target="_blank">License</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
