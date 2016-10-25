@@ -39,13 +39,3 @@ def make_external(url):
     return urljoin(request.url_root, url)
 
 
-# def login_required():
-#     def wrapper(f):
-#         @wraps(f)
-#         def wrapped(*args, **kwargs):
-#             if not session.get('user'):
-#                 flash('You must be logged in..', 'error')
-#                 return redirect(url_for('login'))
-#             return f(*args, **kwargs)
-#         return wrapped
-#     return wrapper

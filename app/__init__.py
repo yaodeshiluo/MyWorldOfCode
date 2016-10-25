@@ -9,18 +9,17 @@ from config import config
 
 bootstrap = Bootstrap()
 mail = Mail()
-moment = Moment() #moment???
+moment = Moment()
 db = SQLAlchemy()
-pagedown = PageDown() #pagedown???
+pagedown = PageDown()
 
 login_manager = LoginManager()
-login_manager.session_protection = 'strong'#session protection???
+login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 
 def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
-    # config[config_name].init_app(app) #necessary???
 
     bootstrap.init_app(app)
     mail.init_app(app)
@@ -33,7 +32,7 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     from .auth import auth as auth_blueprint
-    app.register_blueprint(auth_blueprint, url_prefix='/auth') #why url_prefix is necessary???
+    app.register_blueprint(auth_blueprint, url_prefix='/auth')
 
     return app
 

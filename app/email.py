@@ -5,12 +5,6 @@ from flask_mail import Message
 
 
 def send_async_email(app,msg):
-    '''
-    app_ctx = app.app_context()
-    app_ctx.push()
-    current_app.name #'hello'
-    app_ctx.pop()
-    '''
     with app.app_context():
         mail.send(msg)
 
